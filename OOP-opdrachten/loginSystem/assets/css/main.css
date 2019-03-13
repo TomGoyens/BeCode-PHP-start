@@ -1,0 +1,8 @@
+.grid{
+  display: grid;
+  grid-template: auto / 1fr 1fr;
+}
+.box{
+  box-shadow: 0 4px 4px -4px  #ddd;
+  margin: 20px;
+}
