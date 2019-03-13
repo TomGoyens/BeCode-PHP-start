@@ -1,0 +1,196 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: aleo;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+body{
+  background-color: #000;
+}
+
+form{
+  margin: 1em 0;
+}
+
+.container{
+  height: 100vh;
+  display: grid;
+  grid-template: auto auto / 1fr 99vw 1fr;
+  background: linear-gradient(#005f8b, #000);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header{
+  grid-area: 1 / 2 / span 1 / span 1;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.tablebox{
+  grid-area: 2 / 2 / span 1 / span 1;
+}
+.exportBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.secret input{
+  width: 200px;
+  padding: 10px 0;
+}
+
+#register{
+  grid-area: 2 / 2 / span 1 / span 1;
+}
+
+#logout{
+  grid-area: 3 / 2 / span 1 / span 1;
+}
+
+#updatePlaylist{
+  grid-area: 2 / 2 / span 1 / span 1;
+  width: 100%;
+  display: flex;
+}
+#updatePlaylist input{
+  width:100%;
+}
+
+#confirm{
+  grid-area: 2 / 2 / span 1 / span 1;
+}
+
+.inputBox{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+.inputbox input{
+  width: 50%;
+}
+
+.centered{
+  width: 100%;
+  padding: 10px;
+  display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.g-recaptcha{
+  display: flex;
+  justify-content: center;
+}
+
+.text{
+  text-align: center;
+  margin: 5px;
+  background: linear-gradient(#b48811, #d9c387, #bb9b49);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.error{
+  color: red;
+}
+
+input[name=Submit]{
+  margin: 20px 0;
+}
+input[name=logOut]{
+  height: 3em;
+  width: 50%;
+  margin: 0;
+}
+input[name=save]{
+  padding: 10px 0;
+}
+textarea{
+  padding: 5px;
+  width: 95%;
+  margin: auto;
+}
+input{
+  padding: 5px;
+}
+table{
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .container{
+    display: grid;
+    grid-template: auto auto / 1fr 80vw 1fr;
+  }
+  #logout{
+    position: fixed;
+    bottom: 3px;
+    right: 3px;
+  }
+  .bigForm{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(3, 80px) auto / 1fr 1fr;
+  }
+  .box1{
+    grid-area: 1 / 1;
+  }
+  .box2{
+    grid-area: 1 / 2;
+  }
+  .box3{
+    grid-area: 2 / 1;
+  }
+  .box4{
+    grid-area: 2 / 2;
+  }
+  .box5{
+    grid-area: 3 / 1;
+  }
+  .box6{
+    grid-area: 3 / 2;
+  }
+  .box7{
+    grid-area: 4 / 1;
+  }
+  .box8{
+    grid-area: 4 / 2;
+  }
+  #updatePlaylist input{
+    width:80%;
+  }
+  input[name=logOut]{
+    width: 100%;
+    margin: 0;
+  }
+  table{
+    display: block;
+    background-color: #fff;
+    border-collapse: collapse;
+    padding: 5px;
+  }
+  th, td {
+  border-bottom: 1px solid #ccc;
+  padding: 5px 0;
+  }
+  tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+  tr:hover {
+    background-color: #d9d9d9;
+  }
+}
